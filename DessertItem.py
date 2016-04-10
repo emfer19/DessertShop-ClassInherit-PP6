@@ -13,10 +13,10 @@
 class DessertItem:
   """Main class to obtain dessert name and cost"""
 
-  def __init__(self,n='none',c=0.0):
+  def __init__(self,n='none'):
     """Initializes DessertItem object with dessert name"""
     self.name=n
-    self.cost=c
+    self.cost=0.0
 
   def getName(self):
     """Returns the dessert item name"""
@@ -37,7 +37,7 @@ class DessertItem:
   def __str__(self):
     """Returns a string containing the information of the dessert item"""
     display="\nItem: "+str(self.name)
-    display+="\nCost: "+str(round(self.cost,2))
+    display+="\nCost: $"+str(round(self.cost,3))
     return display
 
 #end of class build
