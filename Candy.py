@@ -15,7 +15,11 @@ class Candy(DessertItem):
   """derived DessertItem class:
   specialized for Candy dessert items.
 
-  Calculates cost based on given weight, and price per pound"""
+  Calculates cost based on given weight, and price per pound
+  
+  Please give PRICE in DOLLARS and CENTS, not just in cents:
+      CORRECT: 1.89
+      INCORRECT: 189"""
 
   def __init__(self,n='Candy',w=0.0,price=0.0):
     """initialize candy object with name, cost, weight, and price per pound"""
