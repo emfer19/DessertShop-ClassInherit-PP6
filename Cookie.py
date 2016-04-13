@@ -24,8 +24,8 @@ class Cookie(DessertItem):
   def __init__(self,n='Cookie',q=0,price=0.0):
     """initialize cookie object with name, quantity, and price per dozen"""
     DessertItem.__init__(self,n)
-    self.quantity=q
-    self.priceDozen=price
+    self.quantity=float(q)
+    self.priceDozen=float(price)
 
   def getQuantity(self):
     """returns the quantity of cookies"""
@@ -37,7 +37,7 @@ class Cookie(DessertItem):
 
   def setQuantity(self,qt):
     """assigns formal parameter to cookie's quantity"""
-    self.quantity=int(qt)
+    self.quantity=floatt(qt)
 
   def setPriceDozen(self,price):
     """assigns the formal parameter to cookie's price"""
@@ -45,7 +45,7 @@ class Cookie(DessertItem):
 
   def calculateCost(self):
     """calculates cost of cookie item based off given quantity and price"""
-    cost=(round(self.getQuantity()*(self.getPriceDozen()/12)))
+    cost=float(round(self.getQuantity()*(self.getPriceDozen()/12)))
     self.setCost(cost)
     return
 

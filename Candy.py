@@ -24,8 +24,8 @@ class Candy(DessertItem):
   def __init__(self,n='Candy',w=0.0,price=0.0):
     """initialize candy object with name, cost, weight, and price per pound"""
     DessertItem.__init__(self,n)
-    self.weight=w
-    self.pricePound=price
+    self.weight=float(w)
+    self.pricePound=float(price)
 
   def getWeight(self):
     """returns the weight of candy"""
