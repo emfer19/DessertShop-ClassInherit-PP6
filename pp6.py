@@ -10,4 +10,11 @@
 
 from Checkout import Checkout
 
+checkout1=Checkout() #create Checkout object
 
+checkout1.createItems() #create the list of items
+checkout1.displayReceipt() #print receipt
+
+#user controlled program close
+print #line space
+raw_input('Press ENTER to close')
