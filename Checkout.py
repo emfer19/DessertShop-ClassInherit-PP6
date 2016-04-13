@@ -21,7 +21,7 @@ class Checkout:
   def __init__(self):
     """initializes with nothing"""
     self._itemList=[]
-    self._file=FileUtilities.openFileReadRobust()
+    self._file=openFileReadRobust()
 
   def createItems(self):
     """Read file and create a list of all the objects,
@@ -37,8 +37,9 @@ class Checkout:
         self._itemList.append(cookieObj) #append it to the list
       elif data[0]=='1': #shows this is a candy
         candyObj=Candy(data[1],data[2],data[3]) #creates the candy object using data in line
-        self._itenList.append(candyObj) #append it to the list
+        self._itemList.append(candyObj) #append it to the list
       line=self._file.readline()
+    self._file.close()
 
   def displayReceipt(self):
     """Calculates the cost of all the items in the list,
